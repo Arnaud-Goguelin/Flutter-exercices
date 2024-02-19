@@ -1,16 +1,18 @@
 # multiple_counters
 
-A new Flutter project.
-
+A new Flutter exercice from:
+https://pro.codewithandrea.com/get-started-flutter/intro/06-state-management 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+To get some practice with Flutter’s built-in tools for state management, I prepared the following challenge.
 
-A few resources to get you started if this is your first Flutter project:
+Extend the default Flutter counter app to work with multiple counters so that it looks like this:
+Daily challenge #1: try to implement a multiple conters app
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+The resulting app should have:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+    a floating action button that you can use to add a new counter
+    a ListView that shows all the counters
+    each item in the ListView should show the counter value and have buttons to increment/decrement the counter value
+
+For this challenge, you can store all the counter values as local application state (no need to persist them to local storage).
