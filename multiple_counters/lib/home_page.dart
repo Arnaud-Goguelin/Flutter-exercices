@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'counter_row.dart';
+import 'increment_or_decrement_buttons.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key, required this.title});
@@ -43,15 +44,10 @@ class _HomePageState extends State<HomePage> {
             const SizedBox(height: 50),
             Align(
               alignment: Alignment.bottomRight,
-              child: FloatingActionButton(
-                backgroundColor: Theme.of(context).colorScheme.surfaceTint,
-                shape: const CircleBorder(),
-                onPressed: _addCounterRow,
-                tooltip: 'Increment',
-                child: const Icon(
-                  Icons.add,
-                  color: Colors.white,
-                ),
+              child: IncrementOrDecrementButton(
+                customCallBack: _addCounterRow,
+                customIcon: Icons.add,
+                customTooltip: 'Increment',
               ),
             ),
           ],

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'increment_decrement_buttons.dart';
+import 'increment_or_decrement_buttons.dart';
 
 class CounterRow extends StatefulWidget {
   const CounterRow({super.key});
@@ -35,9 +35,16 @@ class _CounterRowState extends State<CounterRow> {
         ),
         Row(
           children: [
-            IncrementButton(onPressed: _incrementCounter),
+            IncrementOrDecrementButton(
+              customCallBack: _incrementCounter,
+              customIcon: Icons.add,
+              customTooltip: 'Increment',
+            ),
             const SizedBox(width: 15),
-            DecrementButton(onPressed: _decrementCounter),
+            IncrementOrDecrementButton(
+                customCallBack: _decrementCounter,
+                customIcon: Icons.remove,
+                customTooltip: 'Decrement'),
           ],
         ),
       ],
